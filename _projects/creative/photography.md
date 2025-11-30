@@ -96,26 +96,36 @@ document.addEventListener("DOMContentLoaded", function () {
   const coverflow = document.getElementById("coverflow");
   const images = Array.from(coverflow.querySelectorAll(".coverflow-image"));
 
+  if (images.length === 0) return;
+
   let currentIndex = 0;
 
   function updateCoverflow() {
+    const imgWidth = images[0].offsetWidth || 280; // fallback
+    const gap = 20; // same as your CSS gap
+    const wrapper = coverflow.parentElement;
+    const wrapperWidth = wrapper.offsetWidth;
+
+    // reset classes
     images.forEach((img, i) => {
       img.classList.remove("active", "left", "right");
 
+      const prev = (currentIndex - 1 + images.length) % images.length;
+      const next = (currentIndex + 1) % images.length;
+
       if (i === currentIndex) {
         img.classList.add("active");
-      }
-      else if (i === (currentIndex - 1 + images.length) % images.length) {
+      } else if (i === prev) {
         img.classList.add("left");
-      }
-      else if (i === (currentIndex + 1) % images.length) {
+      } else if (i === next) {
         img.classList.add("right");
       }
     });
 
-    // smoother offset
-    const offset = -currentIndex * 300;
-    coverflow.style.transform = `translateX(${offset}px)`;
+    // center the active image in the wrapper (this is what makes it loop smoothly)
+    const itemWidth = imgWidth + gap;
+    const centerOffset = wrapperWidth / 2 - (currentIndex + 0.5) * itemWidth;
+    coverflow.style.transform = `translateX(${centerOffset}px)`;
   }
 
   function next() {
@@ -128,10 +138,19 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCoverflow();
   }
 
-  // Auto-slide (continuous)
-  setInterval(next, 3000);
+  // Auto-slide continuously
+  let intervalId = setInterval(next, 3000);
 
-  // Swipe events
+  // Pause on hover (optional, but feels nicer on desktop)
+  coverflow.addEventListener("mouseenter", () => {
+    clearInterval(intervalId);
+  });
+
+  coverflow.addEventListener("mouseleave", () => {
+    intervalId = setInterval(next, 3000);
+  });
+
+  // Swipe events for mobile
   let startX = 0;
 
   coverflow.addEventListener("touchstart", e => {
@@ -146,5 +165,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateCoverflow();
 });
-
 </script>
