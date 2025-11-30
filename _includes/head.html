@@ -5,11 +5,12 @@
 <!-- PAGE TITLE -->
 <title>
   {% if page.title %}
-    {{ page.title }} 
+    {{ page.title }} – Melek Rzazade
   {% else %}
-    Melek Rzazade
+    Melek Rzazade – Portfolio
   {% endif %}
 </title>
+
 
 <!-- META DESCRIPTION (SEO) -->
 <meta name="description" content="Portfolio of Melek Rzazade — Computer Science & Cognitive Psychology student specializing in Human-Computer Interaction, AI systems, and multimodal interaction design.">
@@ -30,10 +31,5 @@
 <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
 
 <!-- SOCIAL PREVIEW -->
-<meta property="og:title" content="{% if page.title %}{{ page.title }} – Melek Rzazade{% else %}Melek Rzazade{% endif %}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="{{ '/img/melek.jpg' | relative_url }}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:description" content="Portfolio of Melek Rzazade — Human-Computer Interaction, AI systems, multimodal UX, and social robotics.">
-
-<meta name="twitter:card" content="summary_large_image">
+<!-- SOCIAL PREVIEW -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }} – Melek Rzazade{% else %}Melek Rzazade – Portfolio{% endif %}">
