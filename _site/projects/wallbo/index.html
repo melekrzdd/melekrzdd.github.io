@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- PAGE TITLE -->
+<title>
+  
+    WallBo – Handwashing Buddy 
+  
+</title>
+
+<!-- META DESCRIPTION (SEO) -->
+<meta name="description" content="Portfolio of Melek Rzazade — Computer Science & Cognitive Psychology student specializing in Human-Computer Interaction, AI systems, and multimodal interaction design.">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- FAVICONS -->
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/img/site.webmanifest">
+
+
+<!-- CSS (Bootstrap first, then your theme) -->
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- SOCIAL PREVIEW -->
+<meta property="og:title" content="WallBo – Handwashing Buddy – Melek Rzazade">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/img/melek.jpg">
+<meta property="og:url" content="http://localhost:4000/projects/wallbo/">
+<meta property="og:description" content="Portfolio of Melek Rzazade — Human-Computer Interaction, AI systems, multimodal UX, and social robotics.">
+
+<meta name="twitter:card" content="summary_large_image">
+
+
+<body class="project-page">
+
+  <!-- PROJECT NAVBAR -->
+  <nav class="project-nav">
+    <a href="/" class="project-brand">Melek Rzazade</a>
+
+    <div class="project-links">
+      <a href="/#about">About</a>
+      <a href="/#portfolio">Portfolio</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="project-page-wrapper">
+
+    <!-- TITLE FIRST (CENTERED) -->
+    <div class="project-title-block">
+      <h1 class="project-title">WallBo – Handwashing Buddy</h1>
+
+      
+    </div>
+
+    <!-- GIF UNDER TITLE (CENTERED) -->
+    
+    <div class="project-hero-centered">
+      <img src="/img/portfolio/wallbo-final-presentation.gif" alt="WallBo – Handwashing Buddy">
+    </div>
+    
+
+  
+<div class="project-button-wrapper">
+  <a href="https://drive.google.com/file/d/1qfZqAbU9uqntMNld4Icq0BjLQUcXO_rY/view" class="project-demo-btn" target="_blank">▶ Watch Demo</a>
+</div>
+
+
+
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container project-body">
+      <p>WallBo – Handwashing Buddy is a multimodal conversational AI buddy designed to teach children proper handwashing through engaging interactions, gestures, speech, and expressive animations.</p>
+
+<p>This project was developed during my <strong>Social Robotics Internship at the Social Brain Sciences Lab (SBS) at ETH Zürich in Switzerland</strong>, funded by the <strong>DAAD RISE (Research Internships in Science and Engineering) Worldwide 2025 Scholarship Program</strong>, providing fully funded summer internships for German undergraduate students in science and engineering fields at research institutions around the world. It is a prestigious program offered by the German Academic Exchange Service (DAAD), aimed at fostering international research experience and strengthening global academic collaboration.</p>
+
+<h3 id="responsibilities--contributions">Responsibilities &amp; Contributions</h3>
+<p>During my internship, I was responsible for the core technical development of WallBo’s AI and interaction pipeline. My contributions included:</p>
+
+<ul>
+  <li>Evaluating and testing <strong>more than 15 open-source LLMs</strong>, ultimately deploying <strong>Google Gemma 3:4B via Ollama</strong> for on-device, child-friendly dialogue.</li>
+  <li>Identifying, testing, and integrating <strong>more than 34 child-like TTS systems</strong> to design an age-appropriate agent voice.</li>
+  <li>Implementing <strong>prompt guardrails</strong> and a lightweight <strong>RAG pipeline</strong> to ensure safe, focused, educational conversations.</li>
+  <li>Creating expressive character animations using <strong>Google Flow</strong>, and synchronizing them with interaction flow using <strong>OpenCV gesture tracking</strong>.</li>
+  <li>Developing a working multimodal prototype including educational dialogue flows, animated tutorials, and an interactive quiz.</li>
+</ul>
+
+<p>This internship allowed me to work independently, learn rapidly, and build a complete multimodal AI prototype from research to implementation.</p>
+
+<h3 id="privacy">Privacy</h3>
+
+<p>Due to the fact that WallBo is an active research project led by my supervisor and the Social Brain Sciences Lab at ETH Zürich, the full source code, datasets, and internal implementation details cannot be publicly shared. All work was conducted under ETH Zürich’s research confidentiality guidelines, and any materials shown here represent only high-level descriptions and publicly shareable components of the project.</p>
+
+<p><strong>Supervised by Dr.Amol Deshmukh and Professor Emily S.Cross from the SBS Lab of ETH Zürich</strong></p>
+
+
+    </div>
+
+  </div>
+
+  <script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
+<script>
+document.addEventListener("scroll", function() {
+  const nav = document.getElementById("mainNav");
+  const portfolio = document.getElementById("portfolio");
+  const contact = document.getElementById("contact");
+
+  const scrollY = window.scrollY;
+  const portfolioTop = portfolio.offsetTop - 80;
+  const contactTop = contact.offsetTop - 80;
+
+  if (scrollY >= portfolioTop || scrollY >= contactTop) {
+    // switch to dark navbar
+    nav.classList.add("navbar-dark-text");
+  } else {
+    // keep white navbar
+    nav.classList.remove("navbar-dark-text");
+  }
+});
+</script>
+
+<script src="/js/creative.js"></script>
+
+
+</body>
+</html>

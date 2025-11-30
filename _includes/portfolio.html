@@ -1,0 +1,24 @@
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+
+      {% for project in site.projects %}
+  {% unless project.hide_from_portfolio %}
+  <div class="col-md-4 col-sm-6 portfolio-item">
+    <a href="{{ project.url }}" class="portfolio-link">
+      <img src="{{ project.thumbnail }}" class="img-responsive">
+    </a>
+
+    <div class="portfolio-caption">
+      <h4>{{ project.title }}</h4>
+      <p class="text-muted">{{ project.year }}</p>
+    </div>
+  </div>
+  {% endunless %}
+{% endfor %}
+
+
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,24 @@
+<script src="{{ '/js/jquery.js' | relative_url }}"></script>
+<script src="{{ '/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="{{ '/js/jquery.easing.min.js' | relative_url }}"></script>
+<script>
+document.addEventListener("scroll", function() {
+  const nav = document.getElementById("mainNav");
+  const portfolio = document.getElementById("portfolio");
+  const contact = document.getElementById("contact");
+
+  const scrollY = window.scrollY;
+  const portfolioTop = portfolio.offsetTop - 80;
+  const contactTop = contact.offsetTop - 80;
+
+  if (scrollY >= portfolioTop || scrollY >= contactTop) {
+    // switch to dark navbar
+    nav.classList.add("navbar-dark-text");
+  } else {
+    // keep white navbar
+    nav.classList.remove("navbar-dark-text");
+  }
+});
+</script>
+
+<script src="{{ '/js/creative.js' | relative_url }}"></script>

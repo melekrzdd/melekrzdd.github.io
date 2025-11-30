@@ -1,0 +1,64 @@
+---
+layout: none
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="project-page">
+
+  <!-- PROJECT NAVBAR -->
+  <nav class="project-nav">
+    <a href="{{ '/' | relative_url }}" class="project-brand">Melek Rzazade</a>
+
+    <div class="project-links">
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/' | relative_url }}#portfolio">Portfolio</a>
+      <a href="{{ '/' | relative_url }}#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="project-page-wrapper">
+
+    <!-- TITLE FIRST (CENTERED) -->
+    <div class="project-title-block">
+      <h1 class="project-title">{{ page.title }}</h1>
+
+      {% if page.year %}
+      <p class="project-year">/ {{ page.year }}</p>
+      {% endif %}
+    </div>
+
+    <!-- GIF UNDER TITLE (CENTERED) -->
+    {% if page.thumbnail %}
+    <div class="project-hero-centered">
+      <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+  {% if page.demo %}
+<div class="project-button-wrapper">
+  <a href="{{ page.demo }}" class="project-demo-btn" target="_blank">▶ Watch Demo</a>
+</div>
+{% endif %}
+
+{% if page.github %}
+<div class="project-button-wrapper">
+  <a href="{{ page.github }}" class="project-github-btn" target="_blank">★ View on GitHub</a>
+</div>
+{% endif %}
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container project-body">
+      {{ content }}
+    </div>
+
+  </div>
+
+  {% include scripts.html %}
+
+</body>
+</html>

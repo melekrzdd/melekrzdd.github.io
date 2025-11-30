@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- PAGE TITLE -->
+<title>
+  
+    PLUMP – Planning & Logistics for Unified Management of Projects 
+  
+</title>
+
+<!-- META DESCRIPTION (SEO) -->
+<meta name="description" content="Portfolio of Melek Rzazade — Computer Science & Cognitive Psychology student specializing in Human-Computer Interaction, AI systems, and multimodal interaction design.">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- FAVICONS -->
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/img/site.webmanifest">
+
+
+<!-- CSS (Bootstrap first, then your theme) -->
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- SOCIAL PREVIEW -->
+<meta property="og:title" content="PLUMP – Planning & Logistics for Unified Management of Projects – Melek Rzazade">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/img/melek.jpg">
+<meta property="og:url" content="http://localhost:4000/projects/plump/">
+<meta property="og:description" content="Portfolio of Melek Rzazade — Human-Computer Interaction, AI systems, multimodal UX, and social robotics.">
+
+<meta name="twitter:card" content="summary_large_image">
+
+
+<body class="project-page">
+
+  <!-- PROJECT NAVBAR -->
+  <nav class="project-nav">
+    <a href="/" class="project-brand">Melek Rzazade</a>
+
+    <div class="project-links">
+      <a href="/#about">About</a>
+      <a href="/#portfolio">Portfolio</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="project-page-wrapper">
+
+    <!-- TITLE FIRST (CENTERED) -->
+    <div class="project-title-block">
+      <h1 class="project-title">PLUMP – Planning & Logistics for Unified Management of Projects</h1>
+
+      
+    </div>
+
+    <!-- GIF UNDER TITLE (CENTERED) -->
+    
+    <div class="project-hero-centered">
+      <img src="/img/portfolio/Plump.gif" alt="PLUMP – Planning & Logistics for Unified Management of Projects">
+    </div>
+    
+
+  
+
+
+<div class="project-button-wrapper">
+  <a href="https://github.com/mrzazade/Software-Engineering-Project" class="project-github-btn" target="_blank">★ View on GitHub</a>
+</div>
+
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container project-body">
+      <p>PLUMP (Planning &amp; Logistics for Unified Management of Projects) is a full-stack project management platform built to help teams coordinate tasks, track progress, and collaborate efficiently. Developed as a semester-long software engineering project, it provides a unified environment where users can organize workflows, visualize data, and manage project logistics seamlessly.</p>
+
+<h3 id="course-context">Course Context</h3>
+<p>This project was created for the <strong>S25_CO-561-A_Software Engineering ** taught by **Joaquin Aguado</strong> at Constructor University.<br />
+The course emphasized real-world engineering practices including modular backend design, teamwork, documentation, testing, and full-stack collaboration.</p>
+
+<h3 id="my-role">My Role</h3>
+<p>I contributed as a backend developer, primarily focusing on API design, database modeling, and authentication. My responsibilities included:</p>
+<ul>
+  <li>Designing and partially implementing the API architecture using NestJS and TypeORM, with smooth integration of SQLite as the database.</li>
+  <li>Setting up Swagger API documentation to improve API accessibility, testing, and developer workflow (this part is not included in the public GitHub repository as it belongs to a different submission and is still being finalized locally).</li>
+  <li>Implementing comment functionality with optional file attachments by extending the Prisma schema with new Comment and Attachment models.</li>
+  <li>Developing backend endpoints to create and fetch task-related comments, ensuring secure and structured data handling.</li>
+  <li>Setting up the PLUMP project module using the NestJS CLI and building its controller and service to process HTTP requests.</li>
+  <li>Collaborating with two backend teammates to implement JWT-based session authentication, and updating the Prisma schema to support secure password storage.</li>
+  <li>Contributing to the project presentation materials by preparing slides and assisting in writing the script for the live demo.</li>
+</ul>
+
+<h3 id="tech-stack">Tech Stack</h3>
+
+<p><strong>Frontend</strong></p>
+<ul>
+  <li>React (Vite)</li>
+  <li>Tailwind CSS</li>
+  <li>Framer Motion</li>
+  <li>Recharts (data visualization)</li>
+</ul>
+
+<p><strong>Backend</strong></p>
+<ul>
+  <li>NestJS (TypeScript)</li>
+  <li>Prisma ORM</li>
+  <li>SQLite database</li>
+</ul>
+
+<p><strong>Infrastructure</strong></p>
+<ul>
+  <li>Docker &amp; Docker Compose (multi-service orchestration)</li>
+  <li>GitHub Issues (task management &amp; sprint coordination)</li>
+</ul>
+
+<h3 id="team">Team</h3>
+
+<p>Developed collaboratively by a cross-functional group:</p>
+
+<p><strong>Frontend:</strong> Bissera, Stefan, Milica, Saim<br />
+<strong>Backend:</strong> Kuranage, Felipe, Bilal, Kamila, Madina, Melek</p>
+
+    </div>
+
+  </div>
+
+  <script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
+<script>
+document.addEventListener("scroll", function() {
+  const nav = document.getElementById("mainNav");
+  const portfolio = document.getElementById("portfolio");
+  const contact = document.getElementById("contact");
+
+  const scrollY = window.scrollY;
+  const portfolioTop = portfolio.offsetTop - 80;
+  const contactTop = contact.offsetTop - 80;
+
+  if (scrollY >= portfolioTop || scrollY >= contactTop) {
+    // switch to dark navbar
+    nav.classList.add("navbar-dark-text");
+  } else {
+    // keep white navbar
+    nav.classList.remove("navbar-dark-text");
+  }
+});
+</script>
+
+<script src="/js/creative.js"></script>
+
+
+</body>
+</html>

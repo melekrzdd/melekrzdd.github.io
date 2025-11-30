@@ -1,0 +1,1489 @@
+---
+---
+@charset "utf-8";
+
+// ===== THEME COLORS =====
+$theme-primary: #d4af37;   // gold
+$theme-dark: #000000;      // black
+
+// ===== IMPORT ORIGINAL THEME PARTIALS =====
+@import "mixins";
+@import "base";
+
+// ===== FONTS =====
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+// ===== GLOBAL TYPOGRAPHY =====
+
+/* Body text: Plus Jakarta Sans */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  text-transform: none !important;
+}
+
+/* Headings: Prata */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Prata', serif !important;
+  font-weight: 400;
+}
+
+// ===== NAVBAR =====
+
+/* Brand name at top-left ("Melek Rzazade") */
+.navbar-default .navbar-brand {
+  font-family: 'Prata', serif !important;
+  text-transform: none !important;     // remove ALL CAPS
+  font-size: 20px;
+  color: #d4af37 !important;           // gold
+}
+
+/* Nav links hover/active gold */
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus,
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
+  color: #d4af37 !important;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #d4af37 !important;   /* gold */
+}
+
+/* hover effect optional */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff !important;  /* or #000 if you prefer */
+}
+
+
+// ===== HERO / HEADER SECTION =====
+
+/* Big name text in the hero */
+header.masthead #homeHeading {
+  font-family: 'Prata', serif !important;
+  text-transform: none !important;     // "Melek Rzazade", not caps
+  font-size: 4rem !important;
+}
+
+/* Subtitle under your name */
+header.masthead .header-content-inner p {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+/* Gold underline under your name */
+header.masthead hr {
+  border-color: #d4af37 !important;
+  border-width: 3px;
+  max-width: 70px;
+  margin: 20px auto;
+}
+
+// ===== GOLD BUTTON =====
+
+.btn-primary {
+  background: linear-gradient(135deg, #b37a2a, #e8b04c, #f2c87c);
+  border: none !important;
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 40px !important;
+  padding: 15px 30px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d89a34, #f0c46a, #ffdea3);
+  transform: translateY(-2px);
+  transition: 0.2s ease-in-out;
+}
+
+/* ===================== */
+/*  CUSTOM PORTFOLIO SKIN */
+/* ===================== */
+
+/* --------- Fonts --------- */
+/* Whole site body text */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  text-transform: none !important;
+}
+
+/* Hero name on the landing header */
+header.masthead h1#homeHeading {
+  font-family: 'Prata', serif !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  font-size: 4rem !important;   /* nice big but not screaming */
+}
+
+/* Subtitle under the hero name */
+header.masthead p {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
+}
+
+/* About-section name (“Melek Rzazade” in black block) */
+#about h2.section-heading {
+  font-family: 'Prata', serif !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
+}
+
+/* About-section paragraphs */
+#about p {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* --------- Navbar colors & fonts --------- */
+
+/* Brand text on ALL pages */
+.navbar-default .navbar-brand {
+  font-family: 'Prata', serif !important;
+  text-transform: none !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  color: #d4af37 !important;          /* gold */
+}
+
+/* Navbar links (About / Portfolio / Contact) */
+.navbar-default .navbar-nav > li > a {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ffffff !important;          /* white text */
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #d4af37 !important;          /* gold on hover/active */
+  background-color: transparent !important;
+}
+
+/* Top-of-page navbar over hero (transparent bg) */
+.navbar-default {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+/* When navbar is affixed (after scrolling) – bar should be black */
+.navbar-default.affix {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Keep same colors when affixed */
+.navbar-default.affix .navbar-brand {
+  color: #d4af37 !important;
+}
+
+.navbar-default.affix .navbar-nav > li > a {
+  color: #ffffff !important;
+}
+
+/* --------- About block background --------- */
+
+/* Ensure the big about block stays black */
+#about {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+/* ================= NAV COLOR SYSTEM ================= */
+
+/* Default (Home): transparent navbar over dark background */
+body:not(.about-page):not(.portfolio-page) #mainNav {
+  background: transparent !important;
+}
+
+body:not(.about-page):not(.portfolio-page) #mainNav .navbar-brand,
+body:not(.about-page):not(.portfolio-page) #mainNav .nav > li > a {
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600;
+}
+
+/* ABOUT PAGE */
+body.about-page #mainNav {
+  background: #000 !important;
+}
+
+body.about-page #mainNav .navbar-brand,
+body.about-page #mainNav .nav > li > a {
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600;
+}
+
+/* PORTFOLIO PAGE */
+body.portfolio-page #mainNav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eee;
+}
+
+body.portfolio-page #mainNav .navbar-nav > li > a,
+body.portfolio-page #mainNav .navbar-brand {
+  color: #000 !important;       /* black */
+}
+
+
+/* Remove top border on all pages */
+.navbar-default {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+header, .navbar {
+  border-bottom: none !important;
+}
+
+/* Remove top border line */
+.navbar-default {
+  border: none !important;
+  box-shadow: none !important;
+}
+header, .navbar {
+  border-bottom: none !important;
+}
+
+/* REMOVE TOP BORDER LINE — OVERRIDE EVERYTHING */
+.navbar,
+.navbar-default,
+.navbar-default .navbar-header,
+.navbar-default .navbar-collapse,
+header,
+.site-header {
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* ACTIVE NAV ITEM GOLD */
+.navbar-default .nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a {
+  color: $theme-primary !important;
+}
+
+.navbar-default .nav > li.active > a:hover {
+  color: $theme-primary !important;
+}
+
+/* REMOVE TOP BLACK LINE COMPLETELY */
+#mainNav,
+.navbar-default,
+.navbar-default .navbar-header,
+.navbar-default .navbar-collapse {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#mainNav .nav > li.active > a {
+  color: #d4af37 !important;
+}
+
+body.portfolio-page #mainNav {
+  background: #000 !important;
+}
+
+body.portfolio-page #mainNav .navbar-nav > li > a,
+body.portfolio-page #mainNav .navbar-brand {
+  color: #fff !important;
+}
+
+/* active = gold */
+body.portfolio-page #mainNav .nav > li.active > a {
+  color: #d4af37 !important;
+}
+
+/* ================= NAVBAR FIX FOR ONE-PAGE SITE ================= */
+
+/* Remove the ugly border */
+#mainNav {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Make navbar visible on the hero background */
+.navbar-default {
+  background: rgba(0, 0, 0, 0.4) !important; /* elegant transparent black */
+}
+
+/* Navbar text */
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Active and hover gold */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #d4af37 !important;
+}
+
+
+/* MAKE NAVBAR VISIBLE ON HERO */
+#mainNav.navbar-default {
+  background: rgba(0, 0, 0, 0.35) !important;   /* soft translucent black */
+  border-bottom: none !important;
+}
+
+/* Navbar text visible on hero */
+#mainNav.navbar-default .navbar-brand,
+#mainNav.navbar-default .navbar-nav > li > a {
+  color: #ffffff !important;
+}
+
+/* Hover = gold */
+#mainNav.navbar-default .navbar-nav > li > a:hover {
+  color: #d4af37 !important;
+}
+
+/* BRING NAVBAR IN FRONT OF HERO */
+#mainNav,
+.navbar,
+.navbar-default {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+/* FINAL NAVBAR OVERRIDE */
+
+/* Bar background */
+#mainNav.navbar-default {
+  background: rgba(0, 0, 0, 0.35) !important;  /* soft dark over gold */
+  border-bottom: none !important;
+}
+
+/* Brand + links */
+#mainNav .navbar-brand,
+#mainNav .navbar-nav > li > a {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Hover gold */
+#mainNav .navbar-nav > li > a:hover,
+#mainNav .navbar-nav > li > a:focus {
+  color: #d4af37 !important;
+}
+
+/* === FINAL NAVBAR OVERRIDE === */
+
+/* Make nav bar visible and on top of hero */
+#mainNav.navbar-default {
+  background: rgba(0, 0, 0, 0.35) !important;  /* soft dark strip */
+  border-bottom: none !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Navbar text */
+#mainNav .navbar-brand,
+#mainNav .navbar-nav > li > a {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Hover = gold */
+#mainNav .navbar-nav > li > a:hover,
+#mainNav .navbar-nav > li > a:focus {
+  color: #d4af37 !important;
+}
+
+/* Give the hero a bit of top padding so content isn't under the fixed nav */
+header.masthead {
+  padding-top: 100px;  /* adjust if the bar overlaps */
+}
+
+/* FIX NAVBAR TEXT ON WHITE BACKGROUND */
+#portfolio ~ #mainNav .navbar-nav > li > a,
+#portfolio ~ #mainNav .navbar-brand {
+  color: #000 !important;   /* black text */
+}
+
+body.portfolio-page #mainNav .navbar-nav > li > a:hover {
+  color: #d4af37 !important;   /* gold */
+}
+
+/* Navbar when over white background */
+#mainNav.on-white .navbar-brand,
+#mainNav.on-white .navbar-nav > li > a {
+  color: #000 !important;   /* black */
+}
+
+#mainNav.on-white .navbar-nav > li > a:hover {
+  color: #d4af37 !important; /* gold hover */
+}
+
+.navbar-default {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+  z-index: 10;
+}
+
+
+/* ===== PROJECT PAGE STYLING ===== */
+
+.project-page {
+  max-width: 900px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Header section */
+.project-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-header h1 {
+  font-family: 'Prata', serif;
+  font-size: 2.8rem;
+  color: #000;
+}
+
+.project-year {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0 20px;
+}
+
+/* Demo button */
+.project-demo-btn {
+  background: #d4af37;
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: #000 !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.project-demo-btn:hover {
+  background: #f5d46a;
+  transform: translateY(-2px);
+}
+
+/* Main image */
+.project-hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+/* Body text */
+.project-body h2 {
+  font-family: 'Prata', serif;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.project-body p, 
+.project-body li {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Make project navbar links match the homepage */
+.project-nav a {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 15px !important;      /* main page size */
+  font-weight: 600 !important;
+  color: #d4af37 !important;       /* gold */
+  text-transform: none !important; /* no caps */
+  letter-spacing: 0.8px;           /* optional */
+  margin-left: 25px;
+}
+
+/* Adjust brand name size */
+.project-brand {
+  font-family: 'Prata', serif !important;
+  font-size: 20px !important;
+  font-weight: 400;
+  color: #d4af37 !important;
+}
+
+/* Flex alignment fix */
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+/* FIX PROJECT PAGE IMAGE SIZE */
+.project-hero-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin-top: 140px;
+}
+
+.project-hero-image img {
+  width: 400px !important;     /* reduce image size */
+  max-width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.project-hero-image {
+  flex: 0 0 auto;               /* keeps the image from stretching */
+}
+
+.project-hero-copy {
+  flex: 1;
+  padding-right: 40px;
+}
+
+
+/* Fix blue Explore button */
+.btn-primary {
+  background-color: #d4af37 !important; /* gold */
+  border-color: #d4af37 !important;
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 26px;
+}
+
+.btn-primary:hover {
+  background-color: #b8932f !important; /* darker gold */
+  border-color: #b8932f !important;
+  color: #000 !important;
+}
+
+/* ===== GLOBAL NAVBAR (Homepage, About, Portfolio) ===== */
+
+.navbar-default {
+  width: 100%;
+  background: #000000 !important;
+  padding: 22px 50px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hover gold */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #d4af37 !important;
+}
+
+
+/* ===== PROJECT PAGE OVERRIDE (Hides global navbar) ===== */
+body.project-page .navbar-default {
+  display: none !important;
+}
+
+/* ===== PROJECT PAGE CUSTOM NAVBAR ===== */
+.project-nav {
+  width: 100%;
+  padding: 25px 50px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #d4af37;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Default navbar (hero + about = dark background → white text) */
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important;
+}
+
+/* FORCE NAVBAR TEXT TO GOLD */
+#mainNav.navbar-default .navbar-brand,
+#mainNav.navbar-default .navbar-nav > li > a {
+  color: #d4af37 !important;     /* GOLD */
+}
+
+/* Optional: hover effect */
+#mainNav.navbar-default .navbar-nav > li > a:hover,
+#mainNav.navbar-default .navbar-brand:hover {
+  color: #fff !important;  /* or #000 or darker gold */
+}
+
+/* ============================================================
+   FINAL FIX FOR PROJECT NAVBAR (OVERRIDES EVERYTHING ABOVE)
+   ============================================================ */
+
+.project-nav {
+  width: 100%;
+  padding: 25px 60px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: transparent !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999 !important;
+}
+
+/* Restore right-side links */
+.project-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 40px !important;
+}
+
+/* Link styling */
+.project-links a {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #d4af37 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* Brand styling (left text) */
+.project-brand {
+  font-family: 'Prata', serif !important;
+  font-size: 20px !important;
+  color: #d4af37 !important;
+  text-transform: none !important;
+}
+
+body.project-page .navbar-default {
+  display: none !important;
+}
+
+/* ===== PROJECT TWO-COLUMN LAYOUT ===== */
+
+.project-hero-row.two-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.project-hero-image img {
+  width: 380px;         /* smaller image */
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.project-hero-copy {
+  max-width: 520px;
+}
+
+.project-title {
+  font-family: 'Prata', serif;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.project-year {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.project-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* Demo button */
+.project-demo-btn {
+  background: #d4af37;
+  padding: 12px 30px;
+  border-radius: 40px;
+  color: #000 !important;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+
+.project-demo-btn:hover {
+  background: #f3ce68;
+  transform: translateY(-2px);
+}
+
+/* --- PROJECT PAGE LAYOUT --- */
+
+.project-container {
+  max-width: 1200px;
+  margin: 140px auto 80px;
+  padding: 0 40px;
+}
+
+/* Top section with image + text */
+.project-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* Image on the left */
+.project-image img {
+  width: 420px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Text on the right */
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  font-family: 'Prata', serif;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.project-year {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.project-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* DEMO BUTTON */
+.project-demo-btn {
+  display: inline-block;
+  background: #d4af37;
+  padding: 12px 26px;
+  border-radius: 50px;
+  color: #000 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-demo-btn:hover {
+  background: #f3d277;
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+/* BODY CONTENT */
+.project-body {
+  margin-top: 60px;
+}
+
+.project-body h2 {
+  font-family: 'Prata', serif;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.project-body p, .project-body li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ====== PROJECT PAGE WITH CENTERED GIF ====== */
+
+.project-container {
+  max-width: 900px;
+  margin: 160px auto 80px;
+  padding: 0 25px;
+}
+
+/* Centered horizontal GIF */
+.project-hero-centered {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-hero-centered img {
+  max-width: 80%;      /* adjust if you want smaller/larger */
+  height: auto;
+  border-radius: 12px;  /* optional: clean rounded corners */
+}
+
+/* Title/description section below GIF */
+.project-info-below {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.project-title {
+  font-family: 'Prata', serif;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.project-year {
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.project-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* Demo button */
+.project-demo-btn {
+  display: inline-block;
+  background: #d4af37;
+  padding: 12px 26px;
+  border-radius: 40px;
+  color: #000 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-demo-btn:hover {
+  background: #f3d277;
+  transform: translateY(-2px);
+}
+
+/* Body (Markdown) styling */
+.project-body {
+  margin-top: 40px;
+}
+
+.project-body h2 {
+  font-family: 'Prata', serif;
+  font-size: 1.9rem;
+  margin-top: 50px;
+}
+
+.project-body p,
+.project-body li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Centered project title */
+.project-title-block {
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 40px;
+}
+
+.project-title-block h1 {
+  font-family: 'Prata', serif;
+  font-size: 2.8rem;
+}
+
+/* Centered GIF */
+.project-hero-centered {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.project-hero-centered img {
+  max-width: 850px;
+  width: 90%;
+  border-radius: 10px;
+}
+
+/* Centered demo button */
+.project-demo-centered {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-demo-btn {
+  background: #d4af37;
+  padding: 14px 30px;
+  border-radius: 40px;
+  color: #000 !important;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.project-demo-btn:hover {
+  background: #f5d46a;
+  transform: translateY(-2px);
+}
+
+
+/* ===== IMPROVED PROJECT PAGE TEXT ===== */
+
+.project-body {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Paragraphs */
+.project-body p {
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+  color: #000000 !important;   /* deep black */
+  font-weight: 400;
+}
+
+/* Bullets */
+.project-body li {
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+  color: #000000 !important;
+}
+
+/* Section titles: “Responsibilities & Contributions”, etc. */
+.project-body h2, 
+.project-body h3 {
+  font-family: 'Prata', serif !important;
+  font-size: 2rem !important;
+  color: #000000 !important;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   GLOBAL PROJECT PAGE TYPOGRAPHY — INCREASE TEXT SIZES
+   ============================================================ */
+
+/* Project Title */
+.project-page-wrapper h1,
+.project-title {
+  font-size: 2.4rem !important;
+  line-height: 1.25;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Year under title */
+.project-year {
+  font-size: 1.1rem !important;
+  color: #666 !important;
+  margin-bottom: 20px;
+}
+
+/* Short description under title */
+.project-subtitle {
+  font-size: 1.2rem !important;
+  line-height: 1.6;
+  color: #333 !important;
+}
+
+/* Main project body text */
+.project-body p,
+.project-body li {
+  font-size: 1.15rem !important;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Section headers inside project pages */
+.project-body h2,
+.project-body h3 {
+  font-size: 1.8rem !important;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Bullet points */
+.project-body ul {
+  margin-left: 20px;
+}
+
+.project-body li {
+  margin-bottom: 8px;
+}
+
+/* Make demo / GitHub button also slightly larger */
+.project-demo-btn,
+.project-github-btn {
+  font-size: 1rem !important;
+  padding: 14px 26px !important;
+}
+
+
+/* ============================================================
+   FORCE PROJECT PAGE FONT SIZES (UNIVERSAL OVERRIDE)
+   ============================================================ */
+
+body.project-page .project-page-wrapper,
+body.project-page .project-body,
+body.project-page {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  color: #111 !important;
+}
+
+/* Project Title */
+body.project-page h1.project-title {
+  font-size: 2.6rem !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  color: #000 !important;
+}
+
+/* Year */
+body.project-page .project-year {
+  font-size: 1.2rem !important;
+  color: #555 !important;
+}
+
+/* Subtitle (short intro under title) */
+body.project-page .project-subtitle {
+  font-size: 1.25rem !important;
+  color: #222 !important;
+  line-height: 1.6 !important;
+}
+
+/* Body paragraphs */
+body.project-page .project-body p {
+  font-size: 1.15rem !important;
+  line-height: 1.75 !important;
+  color: #111 !important;
+  max-width: 900px;
+}
+
+/* Section headings (Responsibilities, Tech Stack, etc.) */
+body.project-page .project-body h2,
+body.project-page .project-body h3 {
+  font-size: 1.9rem !important;
+  margin-top: 45px !important;
+  margin-bottom: 15px !important;
+  color: #000 !important;
+}
+
+/* Bullet lists */
+body.project-page .project-body li {
+  font-size: 1.15rem !important;
+  margin-bottom: 10px !important;
+  color: #111 !important;
+}
+
+/* Demo / GitHub buttons */
+body.project-page .project-demo-btn,
+body.project-page .project-github-btn {
+  font-size: 1.05rem !important;
+  padding: 14px 28px !important;
+}
+
+
+/* Center GitHub button under the hero image */
+.project-button-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+/* GitHub button styling */
+.project-github-btn {
+  display: inline-block;
+  background: #d4af37; /* gold */
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #000 !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.project-github-btn:hover {
+  background: #f5d46a;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   RESTORE DEFAULT NAVBAR BEHAVIOR (DISAPPEAR ON SCROLL)
+   ============================================================ */
+
+/* Navbar should NOT be fixed */
+#mainNav,
+.navbar-default {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent !important;
+}
+
+/* When scrolling down, hide the navbar (creative theme behavior) */
+.navbar-default.affix {
+  position: relative !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Project pages: navbar also NOT fixed */
+body.project-page .project-nav {
+  position: absolute !important;
+  background: transparent !important;
+}
+
+body.project-page .project-page-wrapper,
+body.project-page .project-container {
+  margin-top: 0 !important;
+}
+/* ============================================================
+   HOMEPAGE NAVBAR: SHOW ONLY AT TOP, HIDE ON SCROLL
+   ============================================================ */
+
+/* Homepage navbar should NOT be fixed */
+body.home #mainNav,
+body.home .navbar-default {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* When scrolling down, hide navbar */
+body.home .navbar-default.affix {
+  display: none !important;
+}
+
+/* When at the very top, show navbar */
+body.home .navbar-default {
+  display: block !important;
+}
+
+
+/* ===========================
+   CREATIVE PORTFOLIO PAGE
+=========================== */
+
+.creative-intro {
+  text-align: center;
+  margin: 2.5rem 0;
+
+  p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    color: #555;
+  }
+
+  .see-more-btn {
+    padding: 0.7rem 1.6rem;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+
+  .see-more-btn:hover {
+    background: #d4af37;
+    color: #000;
+  }
+}
+
+.creative-gallery {
+  column-count: 3;
+  column-gap: 1.2rem;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.04);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .creative-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .creative-gallery {
+    column-count: 1;
+  }
+}
+
+.creative-categories {
+  text-align: center;
+  margin: 2rem auto 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.category-btn {
+  padding: 0.9rem 1.8rem;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.category-btn:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+.brochure-cta {
+  text-align: center;
+  margin: 40px 0 10px;
+}
+
+.brochure-cta a {
+  margin: 0 10px;
+}
+
+.btn-brochure {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  border: 2px solid #d4af37;
+  background: #d4af37;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-brochure:hover,
+.btn-brochure:focus {
+  background: #000000;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+/* Optional small tweak so the second button looks identical */
+.btn-secondary {
+  /* no extra styles needed, but here if you want later */
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;   
+}
+
+.team-row img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.team-heading {
+  text-align: center;
+  font-family: 'Prata', serif;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.team-row {
+  margin-bottom: 80px;
+}
+
+
+.eyp-heading {
+  text-align: center;
+  font-family: 'Prata', serif;
+  font-size: 32px;
+  margin: 60px 0 30px;
+}
+
+.eyp-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.eyp-slide-track {
+  display: flex;
+  width: max-content; 
+  animation: scroll 60s linear infinite; 
+}
+
+.eyp-slide {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.eyp-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* --- Moodboard Scrolling Slider --- */
+
+.mood-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.mood-slide-track {
+  display: flex;
+  width: max-content;
+  animation: moodscroll 80s linear infinite; 
+}
+
+.mood-slide {
+  width: 250px;          
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.mood-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@keyframes moodscroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ===== COVERFLOW CAROUSEL ===== */
+
+.coverflow-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+  perspective: 1200px;
+}
+
+.coverflow {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.coverflow-image {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+/* 3D center effect */
+.coverflow-image.active {
+  transform: scale(1.15) rotateY(0deg) translateZ(120px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.coverflow-image.left {
+  transform: rotateY(40deg) translateZ(40px);
+  opacity: 0.85;
+}
+
+.coverflow-image.right {
+  transform: rotateY(-40deg) translateZ(40px);
+  opacity: 0.85;
+}
+
+/* Mobile responsiveness */
+@media(max-width: 600px) {
+  .coverflow-image {
+    width: 180px;
+    height: 260px;
+  }
+}
