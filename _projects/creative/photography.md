@@ -104,14 +104,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (i === currentIndex) {
         img.classList.add("active");
-      } else if (i === currentIndex - 1) {
+      }
+      else if (i === (currentIndex - 1 + images.length) % images.length) {
         img.classList.add("left");
-      } else if (i === currentIndex + 1) {
+      }
+      else if (i === (currentIndex + 1) % images.length) {
         img.classList.add("right");
       }
     });
 
-    const offset = -currentIndex * 320;
+    // smoother offset
+    const offset = -currentIndex * 300;
     coverflow.style.transform = `translateX(${offset}px)`;
   }
 
@@ -125,10 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCoverflow();
   }
 
-  // Auto-slide
+  // Auto-slide (continuous)
   setInterval(next, 3000);
 
-  // Swipe events 
+  // Swipe events
   let startX = 0;
 
   coverflow.addEventListener("touchstart", e => {
@@ -143,4 +146,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateCoverflow();
 });
+
 </script>
