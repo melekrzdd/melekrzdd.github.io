@@ -3,33 +3,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- PAGE TITLE -->
-<title>
-  {% if page.title %}
-    {{ page.title }} – Melek Rzazade
-  {% else %}
-    Melek Rzazade – Portfolio
-  {% endif %}
-</title>
-
+<title>Melek Rzazade</title>
 
 <!-- META DESCRIPTION (SEO) -->
-<meta name="description" content="Portfolio of Melek Rzazade — Computer Science & Cognitive Psychology student specializing in Human-Computer Interaction, AI systems, and multimodal interaction design.">
+<meta name="description" content="Portfolio of Melek Rzazade — Human-Computer Interaction, AI systems, multimodal UX, and social robotics.">
 
 <!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <!-- FAVICONS -->
-<link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/img/favicon-16x16.png">
-<link rel="manifest" href="{{ site.baseurl }}/img/site.webmanifest">
-
+<link rel="icon" href="{{ '/img/favicon.ico' | relative_url }}" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/apple-touch-icon.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon-16x16.png' | relative_url }}">
+<link rel="manifest" href="{{ '/img/site.webmanifest' | relative_url }}">
 
 <!-- CSS (Bootstrap first, then your theme) -->
 <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
 
 <!-- SOCIAL PREVIEW -->
-<!-- SOCIAL PREVIEW -->
-<meta property="og:title" content="{% if page.title %}{{ page.title }} – Melek Rzazade{% else %}Melek Rzazade – Portfolio{% endif %}">
+<meta property="og:title" content="Melek Rzazade">
+<meta property="og:description" content="Portfolio of Melek Rzazade — Human-Computer Interaction, AI systems, multimodal UX, and social robotics.">
+<meta property="og:image" content="{{ '/img/melek.jpg' | relative_url }}">
+<meta property="og:url" content="{{ site.url }}">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
